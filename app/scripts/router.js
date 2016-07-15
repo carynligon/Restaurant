@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
-import renderMenu from './views/menu';
-import menuItems from './collections/menu-items';
+import renderMenu from './collections/menu-items';
 
 const Router = Backbone.Router.extend({
   routes: {
@@ -14,8 +13,7 @@ const Router = Backbone.Router.extend({
     console.log('home');
   },
   menuFunction: function () {
-    console.log(menuItems);
-    let $menuList = renderMenu(menuItems);
+    renderMenu();
   },
   orderFunction: function () {
     console.log('order');

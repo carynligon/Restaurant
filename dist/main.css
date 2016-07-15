@@ -1,4 +1,22 @@
-body {
-  background: blue; }
+.menu {
+  font-size: 1rem; }
+
+h3 {
+  font-size: 3rem; }
+
+h5 {
+  font-size: 2rem;
+  display: block; }
+
+ul {
+  display: inline-block; }
+
+span {
+  font-size: 1rem; }
+
+.item-meta-data {
+  font-size: 1rem; }
+  .item-meta-data li {
+    display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */
