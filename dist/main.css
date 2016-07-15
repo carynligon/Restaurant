@@ -1,15 +1,31 @@
 .menu {
-  font-size: 1rem; }
+  font-size: 1rem;
+  width: 65%;
+  float: left; }
+
+.order-box {
+  width: 35%;
+  position: fixed;
+  top: 20vh;
+  right: 0px; }
 
 h3 {
   font-size: 3rem; }
 
 h5 {
   font-size: 2rem;
-  display: block; }
+  width: 90%;
+  display: inline-block;
+  margin: 0; }
+
+.price {
+  display: inline-block;
+  width: 9%; }
 
 ul {
   display: inline-block; }
+  ul li {
+    list-style-type: none; }
 
 span {
   font-size: 1rem; }
@@ -17,6 +33,7 @@ span {
 .item-meta-data {
   font-size: 1rem; }
   .item-meta-data li {
-    display: inline-block; }
+    display: inline-block;
+    list-style-type: none; }
 
 /*# sourceMappingURL=main.css.map */

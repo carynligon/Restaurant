@@ -1,5 +1,14 @@
 .menu {
   font-size: 1rem;
+  width: 65%;
+  float: left;
+}
+
+.order-box {
+  width: 35%;
+  position: fixed;
+  top: 20vh;
+  right: 0px;
 }
 
 h3 {
@@ -8,11 +17,21 @@ h3 {
 
 h5 {
   font-size: 2rem;
-  display: block;
+  width: 90%;
+  display: inline-block;
+  margin: 0;
+}
+
+.price {
+  display: inline-block;
+  width: 9%;
 }
 
 ul {
   display: inline-block;
+  li {
+    list-style-type: none;
+  }
 }
 
 span {
@@ -23,5 +42,6 @@ span {
   font-size: 1rem;
   li {
     display: inline-block;
+    list-style-type: none;
   }
 }
