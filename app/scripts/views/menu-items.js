@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
-import MenuItem from '../models/menu-item';
 import _ from 'underscore';
 import renderOrderBox from './menu-order';
 

@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import renderMenu from './menu-items';
 import _ from 'underscore';
+import renderCheckout from './checkout';
+import router from '../router';
 
 let $orderBox = $(`
   <div class="order-box">
@@ -8,6 +10,7 @@ let $orderBox = $(`
     </ul>
     <span class="tax">Tax: $0</span>
     <span class="total-price">Total: $0</span>
+    <input type="button" name="checkout" id="checkout" value="Checkout" />
   </div>
   `);
 
@@ -23,9 +26,13 @@ function renderOrderBox (data) {
     total+=selectedItem.price;
     let tax = total * 0.08;
     $('.tax').text('Tax: $' + tax.toFixed(2));
-    total = (total + tax);
+    total = (Number(total) + Number(tax));
     $('.total-price').text('Total: $' + total.toFixed(2));
     $('#order-list').append($orderItem);
+  });
+  total = $('.total-price').val();
+  $('#checkout').on('click', function (){
+    router.navigate('checkout', {trigger: true});
   });
 }
 
