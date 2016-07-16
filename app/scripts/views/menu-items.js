@@ -9,7 +9,6 @@ const menuAPI = 'https://tiy-austin-front-end-engineering.github.io/restaurantAp
 let data = [];
 
   function renderMenu () {
-    console.log('hi');
     $.ajax({
       url: menuAPI,
       success: function(response) {
@@ -35,8 +34,8 @@ let data = [];
                       <li>fav</li>
                       <li>sodium</li>
                       <li>cals</li>
+                      <input type="button" name="add-to-order" class="add-to-order" data-id="${item.id}" value="Add to order" />
                     </ul>
-                    <input type="button" name="add-to-order" class="add-to-order" data-id="${item.id}" value="Add to order" />
                   </li>
               `);
               data.push(item);

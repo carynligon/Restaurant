@@ -1,15 +1,14 @@
 import $ from 'jquery';
 import allOrders from '../collections/orders';
+import router from '../router';
 
-function renderCheckout () {
-  let items = [];
-  document.querySelectorAll('.item-name').forEach(function(item) {
-    items.push(item.textContent);
-  });
-  $('.menu').hide();
-  $('#checkout').hide();
-  $('.order-box').addClass('full-width');
-  let $checkoutForm = (`
+function renderCheckout() {
+    let items = [];
+    document.querySelectorAll('.item-name').forEach(function(item) {
+        items.push(item.textContent);
+    });
+    $('.menu').hide();
+    let $checkoutForm = (`
     <form class="checkout-info">
       <input type="text" name="first-name" value="First name" id="first-name" />
       <input type="text" name="last-name" value="Last name" id="last-name" />
@@ -20,19 +19,20 @@ function renderCheckout () {
       <input type="submit" name="submit" value="Submit" id="submit" />
     </form>
     `);
-  $('.container').append($checkoutForm);
-  $('#submit').on('click', function (evt){
-    evt.preventDefault();
-    console.log($('.total-price').val());
-    allOrders.create({
-      name: $('#first-name').val() + ' ' + $('#last-name').val(),
-      items: items,
-      total: document.querySelector('.total-price').innerText.slice(7),
-      phone: $('#phone').val(),
-      address: $('#street').val() + ' ' + $('#city').val() + ' ' + $('#zip').val(),
+    $('.container').append($checkoutForm);
+    $('#submit').on('click', function(evt) {
+        evt.preventDefault();
+        allOrders.create({
+            name: $('#first-name').val() + ' ' + $('#last-name').val(),
+            items: items,
+            total: document.querySelector('.total-price').innerText.slice(7),
+            phone: $('#phone').val(),
+            address: $('#street').val() + ' ' + $('#city').val() + ' ' + $('#zip').val(),
+        });
+        router.navigate('confirm', {
+            trigger: true
+        });
     });
-    console.log(allOrders);
-  });
 }
 
 export default renderCheckout;

@@ -4,6 +4,7 @@ import renderMenu from './views/menu-items';
 import renderOrderBox from './views/menu-order';
 import renderCheckout from './views/checkout';
 import renderHome from './views/home';
+import renderConfirm from './views/confirm';
 
 let data;
 
@@ -11,8 +12,8 @@ const Router = Backbone.Router.extend({
   routes: {
     home: 'homeFunction',
     menu: 'menuFunction',
-    order: 'orderFunction',
-    checkout: 'checkoutFunction'
+    checkout: 'checkoutFunction',
+    confirm: 'confirmFunction'
   },
   homeFunction: function () {
     $('.container').empty();
@@ -22,13 +23,12 @@ const Router = Backbone.Router.extend({
     $('.container').empty();
     data = renderMenu();
   },
-  orderFunction: function () {
-    console.log('order');
-
-  },
   checkoutFunction: function () {
     renderCheckout();
     console.log('checkout');
+  },
+  confirmFunction: function () {
+    renderConfirm();
   }
 });
 

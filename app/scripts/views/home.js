@@ -10,6 +10,7 @@ let $body = (`
   `);
 
 function renderHome() {
+  $('.order-box').hide();
   $('.container').append($body);
 }
 
