@@ -16,19 +16,24 @@ let $orderBox = $(`
 
 function renderOrderBox (data) {
   let total = 0;
+  let tax = 0;
   $orderBox.removeClass('full-width');
   $('.container').append($orderBox);
   $('.order-box').hide();
+  $('.remove').show();
   $(window).bind('scroll', function () {
     let show = $( window ).height() - 200;
     if ($(window).scrollTop() > show) {
+         $('#icon-key').show();
 				 $('.order-box').show();
          $('#checkout').show();
   	 } else if (location.hash === '#checkout') {
+       $('#icon-key').hide();
        $('.order-box').show().addClass('full-width');
        $('#checkout').hide();
      } else {
   		 $('.order-box').hide();
+       $('#icon-key').hide();
   	 }
   });
   $('.add-to-order').on('click', function(evt){
@@ -41,22 +46,17 @@ function renderOrderBox (data) {
       </ul>
       `);
     total+=selectedItem.price;
-    console.log(total);
-    let tax = total * 0.08;
-    $('.tax').text('Tax: $' + tax.toFixed(2));
-    total = (Number(total) + Number(tax));
-    $('.total-price').text('Total: $' + total.toFixed(2));
+    total = Number(total);
+    $('.tax').text('Tax: $' + (total * 0.08));
+    $('.total-price').text('Subtotal: $' + (total * 1.08).toFixed(2));
     $('#order-list').append($orderItem);
     $('.remove').on('click', function (evt){
       let id = $(evt.target).attr('data-id');
       $(`.${id}`).hide();
     });
   });
-  total = $('.total-price').val();
   $('#checkout').on('click', function (){
-    router.navigate('checkout', {
-    trigger: true
-});
+    router.navigate('checkout', {trigger: true});
   });
 }
 
