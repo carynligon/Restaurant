@@ -31,9 +31,9 @@ let data = [];
                     <span class="price">$${item.price}</span>
                     <span class="descriptio">${item.description}</span>
                     <ul class="item-meta-data">
-                      <li>fav</li>
-                      <li>sodium</li>
-                      <li>cals</li>
+                      <li><i class="fa fa-star fav" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-square sodium" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-square calories" aria-hidden="true"></i></li>
                       <input type="button" name="add-to-order" class="add-to-order" data-id="${item.id}" value="Add to order" />
                     </ul>
                   </li>

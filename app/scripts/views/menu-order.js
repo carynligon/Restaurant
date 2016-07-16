@@ -23,8 +23,10 @@ function renderOrderBox (data) {
     let show = $( window ).height() - 200;
     if ($(window).scrollTop() > show) {
 				 $('.order-box').show();
+         $('#checkout').show();
   	 } else if (location.hash === '#checkout') {
        $('.order-box').show().addClass('full-width');
+       $('#checkout').hide();
      } else {
   		 $('.order-box').hide();
   	 }
@@ -32,11 +34,14 @@ function renderOrderBox (data) {
   $('.add-to-order').on('click', function(evt){
     let selectedItem = data[$(evt.target).attr('data-id') - 1];
     let $orderItem = (`
-      <li class="item-name ${selectedItem.id}">${selectedItem.item}</li>
-      <li class="item-price ${selectedItem.id}">${selectedItem.price}</li>
-      <input type="button" name="remove" value="remove" class="remove ${selectedItem.id}" data-id="${selectedItem.id}" />
+      <ul class="selected-item">
+        <li><input type="button" name="remove" value="x" class="remove ${selectedItem.id}" data-id="${selectedItem.id}" /></li>
+        <li class="item-name ${selectedItem.id}">${selectedItem.item}</li>
+        <li class="item-price ${selectedItem.id}">$${selectedItem.price}</li>
+      </ul>
       `);
     total+=selectedItem.price;
+    console.log(total);
     let tax = total * 0.08;
     $('.tax').text('Tax: $' + tax.toFixed(2));
     total = (Number(total) + Number(tax));

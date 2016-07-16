@@ -10,15 +10,19 @@ function renderCheckout() {
     $('.menu').hide();
     let $checkoutForm = (`
     <form class="checkout-info">
-      <input type="text" name="first-name" value="First name" id="first-name" />
-      <input type="text" name="last-name" value="Last name" id="last-name" />
-      <input type="tel" name="phone-number" value="Phone number" id="phone" />
-      <input type="text" name="street" value="Street" id="street" />
-      <input type="text" name="city" value="city" id="city" />
-      <input type="text" name="zipcode" value="Zip" id="zip" />
+      <input type="text" name="first-name" placeholder="First name" id="first-name" />
+      <input type="text" name="last-name" placeholder="Last name" id="last-name" />
+      <input type="tel" name="phone-number" placeholder="Phone number" id="phone" />
+      <input type="text" name="street" placeholder="Street" id="street" />
+      <input type="text" name="city" placeholder="city" id="city" />
+      <input type="text" name="zipcode" placeholder="Zip" id="zip" />
       <input type="submit" name="submit" value="Submit" id="submit" />
     </form>
     `);
+    let $confirmTitle = $(`
+      <h6>Please confirm your order</h6>
+      `);
+    $('.container').prepend($confirmTitle);
     $('.container').append($checkoutForm);
     $('#submit').on('click', function(evt) {
         evt.preventDefault();

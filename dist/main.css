@@ -51,40 +51,81 @@ nav {
 
 .menu {
   font-size: 1rem;
-  width: 65%;
+  width: 58%;
   float: left;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin-left: 2%; }
+  .menu ul {
+    padding: 0; }
 
 .order-box {
-  width: 31%;
-  background: #92898A;
+  width: 33%;
+  background: #EDE3E4;
   position: fixed;
   top: 40vh;
   right: 0px;
-  padding: 25px 0; }
+  padding: 0 0 15px 0;
+  margin-right: 3%;
+  text-align: right; }
+  .order-box span, .order-box #checkout {
+    margin-right: 3%; }
+
+#checkout {
+  border: 0;
+  padding: 10px;
+  width: 120px;
+  background: #92898A;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 0.8rem; }
+  #checkout:hover {
+    background: #fff;
+    color: #92898A; }
+
+#order-list {
+  width: 100%;
+  padding: 0; }
+
+.selected-item {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 5px; }
+  .selected-item li {
+    display: inline-block;
+    margin-right: 3%; }
+  .selected-item .remove {
+    background: #92898A;
+    border: 0;
+    color: #fff;
+    font-size: 1.1rem; }
+    .selected-item .remove:hover {
+      background: #fff;
+      color: #92898A;
+      outline: 0; }
 
 .hide {
   display: none; }
 
 .full-width {
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
-  position: static; }
+  position: static;
+  text-align: center; }
 
 h3 {
   margin: 0;
-  padding-left: 6%;
+  border-bottom: 5px solid #92898A;
   font-size: 3rem; }
 
 h5 {
   font-size: 2rem;
   width: 90%;
   display: inline-block;
-  margin: 0; }
+  margin: 15px 0 0 0; }
 
 .price {
-  display: inline-block;
-  width: 9%; }
+  margin-top: 55px;
+  float: right; }
 
 .menu ul {
   width: 100%; }
@@ -96,15 +137,58 @@ ul {
     list-style-type: none; }
 
 span {
-  font-size: 1rem; }
+  font-size: 1rem;
+  display: block; }
 
 .item-meta-data {
   font-size: 1rem;
-  padding: 0; }
+  padding: 0;
+  border-bottom: 1px solid #efeded; }
   .item-meta-data li {
     display: inline-block;
     list-style-type: none; }
   .item-meta-data input {
-    float: right; }
+    float: right;
+    background: #AF9FA5;
+    border: 0;
+    color: #fff; }
+    .item-meta-data input:hover {
+      background: #fff;
+      color: #AF9FA5;
+      outline: 0; }
+
+.sodium {
+  color: #4591df; }
+
+.calories {
+  color: #20dd2e; }
+
+.fav {
+  color: #e7d02e; }
+
+h6 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0; }
+
+.checkout-info {
+  width: 65%;
+  margin: 20px auto 100px auto;
+  text-align: center; }
+  .checkout-info input {
+    width: 25%;
+    line-height: 1.5rem; }
+    .checkout-info input:focus {
+      outline: 0; }
+
+#submit {
+  margin-top: 20px;
+  border: 0;
+  background: #92898A;
+  color: #fff; }
+  #submit:hover {
+    background: #fff;
+    color: #92898A;
+    outline: 0; }
 
 /*# sourceMappingURL=main.css.map */

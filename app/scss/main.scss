@@ -63,18 +63,67 @@ nav {
 
 .menu {
   font-size: 1rem;
-  width: 65%;
+  width: 58%;
   float: left;
   box-sizing: border-box;
+  margin-left: 2%;
+  ul {
+    padding: 0;
+  }
 }
 
 .order-box {
-  width: 31%;
-  background: $primary;
+  width: 33%;
+  background: $secondary;
   position: fixed;
   top: 40vh;
   right: 0px;
-  padding: 25px 0;
+  padding: 0 0 15px 0;
+  margin-right: 3%;
+  text-align: right;
+  span, #checkout {
+    margin-right: 3%;
+  }
+}
+
+#checkout {
+  border: 0;
+  padding: 10px;
+  width: 120px;
+  background: $primary;
+  color: $white;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  &:hover {
+    background: $white;
+    color: $primary;
+  }
+}
+
+#order-list {
+  width: 100%;
+  padding: 0;
+}
+
+.selected-item {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 5px;
+  li {
+    display: inline-block;
+    margin-right: 3%;
+  }
+  .remove {
+    background: $primary;
+    border: 0;
+    color: $white;
+    font-size: 1.1rem;
+    &:hover {
+      background: $white;
+      color: $primary;
+      outline: 0;
+    }
+  }
 }
 
 .hide {
@@ -82,14 +131,15 @@ nav {
 }
 
 .full-width {
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
   position: static;
+  text-align: center;
 }
 
 h3 {
   margin: 0;
-  padding-left: 6%;
+  border-bottom: 5px solid $primary;
   font-size: 3rem;
 }
 
@@ -97,12 +147,12 @@ h5 {
   font-size: 2rem;
   width: 90%;
   display: inline-block;
-  margin: 0;
+  margin: 15px 0 0 0;
 }
 
 .price {
-  display: inline-block;
-  width: 9%;
+  margin-top: 55px;
+  float: right;
 }
 
 .menu ul {
@@ -119,16 +169,69 @@ ul {
 
 span {
   font-size: 1rem;
+  display: block;
 }
 
 .item-meta-data {
   font-size: 1rem;
   padding: 0;
+  border-bottom: 1px solid #efeded;
   li {
     display: inline-block;
     list-style-type: none;
   }
   input {
     float: right;
+    background: $color3;
+    border: 0;
+    color: $white;
+    &:hover {
+      background: $white;
+      color: $color3;
+      outline: 0;
+    }
+  }
+}
+
+.sodium {
+  color: #4591df;
+}
+
+.calories {
+  color: #20dd2e;
+}
+
+.fav {
+  color: #e7d02e;
+}
+
+h6 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+.checkout-info {
+  width: 65%;
+  margin: 20px auto 100px auto;
+  text-align: center;
+  input {
+    width: 25%;
+    line-height: 1.5rem;
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+#submit {
+  margin-top: 20px;
+  border: 0;
+  background: $primary;
+  color: $white;
+  &:hover {
+    background: $white;
+    color: $primary;
+    outline: 0;
   }
 }
