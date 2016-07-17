@@ -7,6 +7,10 @@ function renderCheckout() {
     document.querySelectorAll('.item-name').forEach(function(item) {
         items.push(item.textContent);
     });
+    let requests = [];
+    document.querySelectorAll('.requests').forEach(function(item) {
+        items.push(item.textContent);
+    });
     $('.menu').hide();
     $('.remove').hide();
     let $checkoutForm = (`
@@ -20,23 +24,10 @@ function renderCheckout() {
       <input type="submit" name="submit" value="Submit" id="submit" />
     </form>
     `);
-    let $editBtn = $(`
-      <div id="edit">
-        <input type="button" name="edit" value="Edit" />
-      </div>
-      `);
     let $confirmTitle = $(`
       <h6>Please confirm your order</h6>
       `);
-    $('.remove').on('click', function (evt){
-      let id = $(evt.target).attr('data-id');
-      $(`.${id}`).hide();
-    });
     $('.container').prepend($confirmTitle);
-    $('.container').append($editBtn);
-    $('#edit').on('click', function(){
-      router.navigate('menu', {trigger: true});
-    });
     $('.container').append($checkoutForm);
     $('#submit').on('click', function(evt) {
         evt.preventDefault();
@@ -46,6 +37,7 @@ function renderCheckout() {
             total: document.querySelector('.total-price').innerText.slice(10),
             phone: $('#phone').val(),
             address: $('#street').val() + ' ' + $('#city').val() + ' ' + $('#zip').val(),
+            specialRequests: requests
         });
         router.navigate('confirm', {
             trigger: true

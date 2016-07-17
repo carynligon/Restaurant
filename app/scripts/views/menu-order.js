@@ -15,6 +15,10 @@ let $orderBox = $(`
   `);
 
 function renderOrderBox (data) {
+  $('.remove').on('click', function (evt){
+    let id = $(evt.target).attr('data-id');
+    $(`.${id}`).hide();
+  });
   let total = 0;
   let tax = 0;
   $orderBox.removeClass('full-width');
@@ -43,6 +47,8 @@ function renderOrderBox (data) {
         <li><input type="button" name="remove" value="x" class="remove ${selectedItem.id}" data-id="${selectedItem.id}" /></li>
         <li class="item-name ${selectedItem.id}">${selectedItem.item}</li>
         <li class="item-price ${selectedItem.id}">$${selectedItem.price}</li>
+        <li class="request-label">Special Requests</li>
+        <li class="requests"><input type="text" name="requests" class="request"></li>
       </ul>
       `);
     total+=selectedItem.price;
