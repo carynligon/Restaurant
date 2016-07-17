@@ -5,7 +5,8 @@ const apiURL = 'https://tiny-za-server.herokuapp.com/collections/caryns-cafe-ord
 const Order = Backbone.Model.extend({
   urlRoot: apiURL,
   defaults: {
-    timestamp: new Date()
+    timestamp: new Date(),
+    complete: 0
   }
 });
 

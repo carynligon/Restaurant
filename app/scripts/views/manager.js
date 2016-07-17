@@ -23,9 +23,20 @@ function renderManagerView() {
             <li>Total: ${singleOrder.total}</li>
             <li>Phone: ${singleOrder.phone}</li>
             <li>Address: ${singleOrder.address}</li>
+            <li>Complete <input type="checkbox" class="checkbox" data-id="${singleOrder._id}"/></li>
           </ul>
           `);
         $('#all-orders').append($orderListItem);
+      });
+      $('.checkbox').on('click', function(evt) {
+        let id = $(evt.target).attr('data-id');
+        let completedOrder = allOrders.where({
+          _id: id
+        });
+        allOrders.set(completedOrder, {
+          complete: 1
+        });
+        console.log(allOrders);
       });
     }
   });

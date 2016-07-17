@@ -9,7 +9,7 @@ function renderLogin() {
            <h2>Login</h2>
            <input type="text" name="username" placeholder="username" id="username"/>
            <input type="password" max-length=12 name="password" placeholder="password" id="password" />
-           <input type="submit" name="submit" value="submit">
+           <input type="submit" name="submit" value="submit" id="login-btn">
          </form>
     </div>
     `);

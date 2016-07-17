@@ -37,7 +37,8 @@ function renderCheckout() {
             total: document.querySelector('.total-price').innerText.slice(10),
             phone: $('#phone').val(),
             address: $('#street').val() + ' ' + $('#city').val() + ' ' + $('#zip').val(),
-            specialRequests: requests
+            specialRequests: requests,
+            complete: 0
         });
         router.navigate('confirm', {
             trigger: true
