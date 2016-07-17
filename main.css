@@ -64,7 +64,7 @@ nav {
 
 #icon-key {
   position: fixed;
-  left: 550px;
+  left: 64%;
   top: 160px; }
 
 .order-box {
@@ -78,6 +78,9 @@ nav {
   text-align: right; }
   .order-box span, .order-box #checkout {
     margin-right: 3%; }
+
+.request-label {
+  font-size: 0.8rem; }
 
 #checkout {
   border: 0;
@@ -222,5 +225,17 @@ h6 {
 iframe {
   margin: 0 auto 10vh auto;
   display: inherit; }
+
+#login {
+  float: right;
+  color: #fff;
+  padding-right: 3%; }
+  #login a {
+    font-size: 1rem; }
+
+.single-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #efeded;
+  padding: 0; }
 
 /*# sourceMappingURL=main.css.map */
