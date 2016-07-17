@@ -1,25 +1,12 @@
-# Basic Build with NPM scripts
-This is a project scaffolding and build tool for the TIY Austin Front-End Engineering course. Feel free to use and enjoy! Feedback and PRs welcome!
+# About the app
+  - This an app for a restaurant where users can order online
+  - The date of each order is sent to an API by it's collection
+  - The login feature is an owner interface where the restaurant can go in and see their orders
+  - The login credentials are:
+    - username: manager
+    - password: password
 
-## Features
-- A bare bones scaffolding for an SPA, without any libraries built in
-- A static server for serving up your dev environment via http
-- `app` directory for development, preloaded with an `index.html`, `scripts/entry.js`, `scss/main.scss` and `assets/`
-- `dist` directory for deployable code
-- es2015 and babel, including module syntax
-- sass (.scss)
+# The planning process
+  - All of my planning for this project was done on a white board, here is a picture:
 
-## Installation
-- Clone this repo (or fork then clone, if you prefer)
-- Remove the git history by running `rm -rf .git`
-- Set up a new git repo
-- Run `npm install`
-
-## Use
-- `npm install` will scaffold your project AND start the dev server
-- `npm start` will start the dev server and watch for changes
-- `npm run deploy` will push the content of `dist/` to gh-pages
-- When the server is running, your site will be live on [http://localhost:8080/](http://localhost:8080/)
-
-## Dependencies
-- `sass` [install guide here](http://sass-lang.com/install)
+http://imgur.com/AbzgCYO
