@@ -9,4 +9,4 @@
 # The planning process
   - All of my planning for this project was done on a white board, here is a picture:
 
-http://imgur.com/AbzgCYO
+[![Process](http://imgur.com/AbzgCYO)]
