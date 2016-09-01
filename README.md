@@ -6,6 +6,10 @@
     - username: manager
     - password: password
 
+
+[View live](https://carynligon.github.io/Restaurant)
+
+
 # The planning process
   - All of my planning for this project was done on a white board, here is a picture:
 
